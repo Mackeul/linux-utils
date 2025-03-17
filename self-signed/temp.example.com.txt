@@ -1,0 +1,41 @@
+[rootcert]
+default_bits=2048
+distinguished_name=rootdn
+prompt=no
+req_ext=rootcert_ext
+
+[rootdn]
+C="US"
+ST="Texas"
+L="Dallas"
+O="Acme Widgets Inc."
+OU="Acme Security"
+emailAddress="email@example.com"
+CN="Firstname Lastname"
+
+[rootcert_ext]
+basicConstraints=critical,CA:TRUE
+keyUsage=critical,digitalSignature,cRLSign,keyCertSign
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid,issuer
+
+[cert]
+default_bits=2048
+distinguished_name=certdn
+prompt=no
+req_extensions=cert_ext
+
+[certdn]
+C="US"
+ST="Texas"
+L="Dallas"
+O="Acme Widgets Inc."
+OU="Acme Security"
+emailAddress="email@example.com"
+CN="servers.example.com"
+
+[cert_ext]
+basicConstraints=CA:FALSE
+subjectAltName=critical,DNS:*.example.com
+extendedKeyUsage=serverAuth
+subjectKeyIdentifier=hash
