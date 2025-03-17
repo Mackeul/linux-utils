@@ -3,7 +3,7 @@ Scripts, configs, etc... useful in Linux.
 
 ## The self-signed.sh script
 
-The self-signed.sh script is designed to create a self-signed wildcard certificate that is good for 100 years.  The user can use then use the certificate on servers and install the Root certificate as a trusted authority on clients.  Once installed, we hopefully never have to deal with certs again on the same machines.
+The self-signed.sh script is designed to create a self-signed wildcard certificate that is good for 100 years.  The user can then use the certificate on servers and install the Root certificate as a trusted authority on clients.  Once installed, we hopefully never have to deal with certs again on the same machines.
 
 - **Input parameters**: *domain.tld*.  Default is example.com in script if not provided.
     - Example: /bin/sh self-signed.sh example.com
