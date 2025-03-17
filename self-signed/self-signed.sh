@@ -12,7 +12,7 @@
 _x=0
 
 INPUT_DOMAIN=$1
-DEFAULT_DOMAIN=malazan.wu
+DEFAULT_DOMAIN=example.com
 DOMAIN=${INPUT_DOMAIN:=$DEFAULT_DOMAIN}
 
 # Create certs good for 100 years.
