@@ -1,2 +1,14 @@
 # linux-utils
 Scripts, configs, etc... useful in Linux.
+
+## The self-signed.sh script
+
+The self-signed.sh script is designed to create a self-signed wildcard certificate that is good for 100 years.  The user can use then use the certificate on servers and install the Root certificate as a trusted authority on clients.  Once installed, we hopefully never have to deal with certs again on the same machines.
+
+- **Input parameters**: *domain.tld*.  Default is example.com in script if not provided.
+    - Example: /bin/sh self-signed.sh example.com
+
+- *Optional pass.domain.tld.txt* file containing passphrase can be used to provide the same passphrase in all steps. 
+    - Example: pass.example.com.txt containing one line it with the passphrase: my password.  See pass.example.com.txt.
+
+- *Optional temp.domain.tld.text* file containing sections for rootcert and cert. See temp.example.com.txt.
