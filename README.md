@@ -14,4 +14,5 @@ The self-signed.sh script is designed to create a self-signed wildcard certifica
 - *Optional temp.domain.tld.text* file containing sections for rootcert and cert. See temp.example.com.txt.
 
 ## The plex-create-p12.sh script
-Designed to create a PKCS12 certificate with export passphrase set to how Plex wants it.  Requires a PEM cert file and key file to work (see self-signed to make your own).  Also needs the ProcessMachineIdentifier key from Plex, which can be found in ** /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Preferences.xml** on Debian servers.
+Designed to create a PKCS12 certificate with export passphrase set to how Plex wants it.  Uses OpenSSL to accomplish this, that is required to be installed.  Requires a PEM cert file and key file to work (see self-signed to make your own).  Also needs the ProcessMachineIdentifier key from Plex, which can be found in 
+**/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Preferences.xml** on Debian servers.
