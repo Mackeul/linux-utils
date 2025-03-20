@@ -3,7 +3,7 @@
 # description: Mounts my usb drives.
 
 # Configure all labels here (should be the volume name, case sensitive
-allLabels="BM-Mobile1 BM-Mobile2 Hammer MC-FUJITSU SIMPLETOUGH"
+allLabels="<disk-label-1> <disk-label-2> <disk-label-3>"
 
 # Loop on all labels configured above
 for aLabel in $allLabels; do
